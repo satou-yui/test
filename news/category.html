@@ -1,0 +1,128 @@
+<!-- テスト -->
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/index.css"/>
+  </head>
+  <body>
+    <header class="header"> 
+      <div class="header__inner l-wrapper">
+        <div class="header__logo"> 
+          <h1 class="logo"> <a class="logo__link" href="../index.html"> <img class="logo__img" src="../images/logo.svg" alt="logo"/></a></h1>
+        </div>
+        <nav class="g-nav">
+          <ul class="g-nav__list"> 
+            <li class="g-nav__item"> <a class="g-nav__link" href="#">NEWS</a></li>
+            <li class="g-nav__item"> <a class="g-nav__link" href="#">ABOUT</a></li>
+            <li class="g-nav__item"> <a class="g-nav__link" href="#">BUSINESS</a></li>
+            <li class="g-nav__item"> <a class="g-nav__link" href="#">COMPANY</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__contact"><a class="contact">お問い合わせ</a></div>
+    </header><!-- header__end -->
+    <main id="app">
+      <div class="l-page-contents">
+        <div class="l-wrapper"> 
+          <div class="page-title">
+            <h2 class="heading-primary heading-primary--page">News & Press</h2>
+          </div>
+          <div class="news-datail">
+            <ul class="tab-menu"> 
+              <li class="tab-menu__item" :class="{tabMeunActive: active === 'news'}" @click="clickTabMenu('news')"><span>ニュース</span></li>
+              <li class="tab-menu__item" :class="{tabMeunActive: active === 'release'}" @click="clickTabMenu('release')"><span>プレスリリース</span></li>
+            </ul>
+            <div :class="active === 'news' ? 'newsDatail' : active === 'release' ? 'releaseDatail' : ''">
+              <tamplate v-if="active === 'news'">
+                <div class="news-datail-list">
+                  <dl class="news-datail-list__item">
+                    <dt class="news-list__heading news-datail-list__heading">
+                      <time class="news-list__date">2021.11.17</time>
+                      <div class="news-list__label"> <span class="label-category">NEWS</span></div>
+                    </dt>
+                    <dd class="news-list__body"> <a class="news-list__link" href="#">ニュースタイトル５タイトル５タイトル５タイトル５タイトル５</a></dd>
+                  </dl>
+                  <dl class="news-datail-list__item">
+                    <dt class="news-list__heading news-datail-list__heading">
+                      <time class="news-list__date">2021.11.17 </time>
+                      <div class="news-list__label"> <span class="label-category">NEWS</span></div>
+                    </dt>
+                    <dd class="news-list__body"> <a class="news-list__link" href="#">ニュースタイトル４タイトル４タイトル４タイトル４タイトル４</a></dd>
+                  </dl>
+                  <dl class="news-datail-list__item">
+                    <dt class="news-list__heading news-datail-list__heading">
+                      <time class="news-list__date">2021.11.17 </time>
+                      <div class="news-list__label"> <span class="label-category">NEWS</span></div>
+                    </dt>
+                    <dd class="news-list__body"> <a class="news-list__link" href="#">ニュースタイトル３タイトル３タイトル３タイトル３タイトル３</a></dd>
+                  </dl>
+                  <dl class="news-datail-list__item">
+                    <dt class="news-list__heading news-datail-list__heading">
+                      <time class="news-list__date">2021.11.17 </time>
+                      <div class="news-list__label"> <span class="label-category">NEWS</span></div>
+                    </dt>
+                    <dd class="news-list__body"> <a class="news-list__link" href="#">ニュースタイトル２タイトル２タイトル２タイトル２タイトル２</a></dd>
+                  </dl>
+                  <dl class="news-datail-list__item">
+                    <dt class="news-list__heading news-datail-list__heading">
+                      <time class="news-list__date">2021.11.17 </time>
+                      <div class="news-list__label"> <span class="label-category">NEWS</span></div>
+                    </dt>
+                    <dd class="news-list__body"> <a class="news-list__link" href="#">ニュースタイトル１タイトル１タイトル１タイトル１タイトル１</a></dd>
+                  </dl>
+                </div>
+              </tamplate>
+              <tamplate v-if="active === 'release'">
+                <div class="news-datail-list">
+                  <dl class="news-datail-list__item">
+                    <dt class="news-list__heading news-datail-list__heading">
+                      <time class="news-list__date">2021.11.17</time>
+                      <div class="news-list__label"> <span class="label-category">PRESS</span></div>
+                    </dt>
+                    <dd class="news-list__body"> <a class="news-list__link" href="#">プレスリリースタイトル３</a></dd>
+                  </dl>
+                  <dl class="news-datail-list__item">
+                    <dt class="news-list__heading news-datail-list__heading">
+                      <time class="news-list__date">2021.11.17 </time>
+                      <div class="news-list__label"> <span class="label-category">PRESS</span></div>
+                    </dt>
+                    <dd class="news-list__body"> <a class="news-list__link" href="#">プレスリリースタイトル２</a></dd>
+                  </dl>
+                  <dl class="news-datail-list__item">
+                    <dt class="news-list__heading news-datail-list__heading">
+                      <time class="news-list__date">2021.11.17 </time>
+                      <div class="news-list__label"> <span class="label-category">PRESS</span></div>
+                    </dt>
+                    <dd class="news-list__body"> <a class="news-list__link" href="#">プレスリリースタイトル1</a></dd>
+                  </dl>
+                </div>
+              </tamplate>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main><!-- header__end -->
+    <footer class="footer">
+      <div class="l-wrapper"> 
+        <div class="footer__body"> 
+          <div class="footer__logo">
+            <div class="logo"> <a class="logo__link" href=""> <img class="logo__img" src="../images/logo.svg" alt="logo"/></a></div>
+          </div>
+          <div class="footer__address">
+            <p> </p>Web Entertainment Design Inc.<br>
+            West Building 3F <br>
+            9-99 Sakuragaokacho Shibuya-ku <br>
+            Tokyo, Japan 150-0031 <br>
+            T/99-9999-9999 
+          </div>
+        </div>
+        <div class="footer__copy"> <small>© Web Entertainment Design Inc.</small></div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="../js/vue_index.js"></script>
+  </body>
+</html>

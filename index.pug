@@ -1,0 +1,142 @@
+doctype html
+html(lang="ja")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+    link(rel="stylesheet", href="css/index.css")
+  body 
+    header.header 
+      .header__inner.l-wrapper
+        .header__logo 
+          h1.logo 
+            a.logo__link(href="") 
+              img.logo__img(src="images/logo.svg", alt="logo")
+  
+        nav.g-nav
+          ul.g-nav__list 
+            li.g-nav__item 
+              a.g-nav__link(href="news/category.html") NEWS
+            li.g-nav__item 
+              a.g-nav__link(href="#") ABOUT
+            li.g-nav__item 
+              a.g-nav__link(href="#") BUSINESS
+            li.g-nav__item 
+              a.g-nav__link(href="#") COMPANY
+      .header__contact
+        a.contact お問い合わせ
+    <!-- header__end -->
+    main
+      .main-visual
+        img.main-visual__img(src="images/mainvisual.jpg", alt="mainvisual")
+      <!-- main-visual__end -->
+      .news.l-section#news
+        .l-wrapper 
+          .section-heading
+            h2.heading-primary NEWS
+              span.heading-primary__sub ニュース
+
+          .news-list
+            ul.news-list__list 
+              li.news-list__item
+                .news-list__heading
+                  time.news-list__date 2021.01.01
+                  .news-list__label 
+                    span.label-category NEWS
+                .news-list__body 
+                  a.news-list__link(href="#") タイトルタイトルタイトルタイトル
+
+              li.news-list__item
+                .news-list__heading
+                  time.news-list__date 2021.01.01
+                  .news-list__label 
+                    span.label-category PRESS
+                .news-list__body 
+                  a.news-list__link(href="#") タイトルタイトルタイトルタイトル
+
+              li.news-list__item
+                .news-list__heading
+                  time.news-list__date 2021.01.01
+                  .news-list__label 
+                    span.label-category NEWS
+                .news-list__body 
+                  a.news-list__link(href="#") タイトルタイトルタイトルタイトル
+      <!-- news__end -->
+      .about.l-section#about
+        .about__img-wrapper 
+          img.about__img(src="images/about.jpg", alt="about-img")
+        .about__contents 
+          .section-heading
+            h2.heading-primary ABOUT
+              span.heading-primary__sub 私たちについて
+          .about__body
+            .about__text
+              p テキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキスト
+              p テキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキスト
+              p テキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキスト
+      <!-- about__end -->
+      .business.l-section#business 
+        .l-wrapper
+          .section-heading
+            h2.heading-primary BUSINESS
+              span.heading-primary__sub 事業内容
+          .business__body
+            .business__contents-left 
+              .business__item
+                p.business__heading Web制作・マーケティング
+                img.business__img(src="images/business1.jpg", alt="#")
+              .business__item
+                p.business__heading インターネットメディア事業
+                img.business__img(src="images/business2.jpg", alt="#")
+
+            .business__contents-right 
+                .business__item
+                  p.business__heading プロモーション企画・制作
+                  img.business__img(src="images/business3.jpg", alt="#")
+                .business__item
+                  p.business__heading ソーシャル企画・運営
+                  img.business__img(src="images/business4.jpg", alt="#")
+      <!-- business__end -->
+      .company.l-section#company
+        .l-wrapper
+          .company__contents
+            .section-heading
+              h2.heading-primary COMPANY
+              span.heading-primary__sub 会社情報
+            .company__body 
+              dl.info 
+                dt.info__heading 会社名
+                dd.info__desc ウェブエンターテイメントデザイン株式会社
+                dt.info__heading 所在地
+                dd.info__desc 東京都渋谷区桜丘町99-9 West Building 3F
+                dt.info__heading 代表
+                dd.info__desc ＸＸＸＸＸＸ
+                dt.info__heading 設立
+                dd.info__desc 2021年1月1日
+                dt.info__heading 資本金
+                dd.info__desc 3,000,000円
+                dt.info__heading 事業内容
+                dd.info__desc Web制作・マーケティング
+                dd.info__desc.info__desc--add インターネットメディア事業
+                dd.info__desc.info__desc--add プロモーション企画・制作
+                dd.info__desc.info__desc--add ソーシャル企画・運営
+          .company__img-wrapper
+            img.company__img(src="images/company.jpg", alt="#")
+      <!-- company__end -->
+    footer.footer
+      .l-wrapper 
+        .footer__body 
+          .footer__logo
+            .logo 
+              a.logo__link(href="") 
+                img.logo__img(src="images/logo.svg", alt="logo")
+          .footer__address
+            p 
+            | Web Entertainment Design Inc.<br>
+            | West Building 3F <br>
+            | 9-99 Sakuragaokacho Shibuya-ku <br>
+            | Tokyo, Japan 150-0031 <br>
+            | T/99-9999-9999 
+        .footer__copy 
+          small © Web Entertainment Design Inc.

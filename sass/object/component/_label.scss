@@ -1,0 +1,13 @@
+@charset "UTF-8";
+@use '../../global' as g;
+
+.label-category {
+  display: block;
+  width: 50px;
+  height: 20px;
+  line-height: 20px;
+  background-color: g.$color-primary;
+  color: g.$color-reverse;
+  text-align: center;
+  @include g.font-size(12)
+}

@@ -1,0 +1,33 @@
+@charset "UTF-8";
+@use '../global' as g;
+
+.section-heading {
+  margin-bottom: 50px;
+  &::after {
+    content: "";
+    margin-top: 35px;
+    width: 40px;
+    height: 1px;
+    background-color: g.$color-primary;
+    display: block;
+  }
+}
+
+.page-title {
+  margin-bottom: 80px;
+}
+
+.heading-primary {
+  @include g.font-size(36);
+  letter-spacing: .3em;
+  &--page {
+    line-height: 1;
+  }
+}
+
+
+.heading-primary__sub {
+  @include g.font-size(14);
+  display: block;
+  letter-spacing: 0;
+}

@@ -1,0 +1,25 @@
+@charset "UTF-8";
+@use '../global' as g;
+
+html {
+  font-size: 100%;
+}
+
+body {
+  @include g.font-size(14);
+  background-color: g.$body-color;
+}
+
+a {
+  transition: .3s;
+  &:hover {
+    transition: .3s;
+    text-decoration: underline;
+  }
+}
+
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}

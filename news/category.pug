@@ -1,0 +1,120 @@
+html(lang="ja")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+    link(rel="stylesheet", href="../css/index.css")
+  body
+    header.header 
+      .header__inner.l-wrapper
+        .header__logo 
+          h1.logo 
+            a.logo__link(href="../index.html") 
+              img.logo__img(src="../images/logo.svg", alt="logo")
+        nav.g-nav
+          ul.g-nav__list 
+            li.g-nav__item 
+              a.g-nav__link(href="#") NEWS
+            li.g-nav__item 
+              a.g-nav__link(href="#") ABOUT
+            li.g-nav__item 
+              a.g-nav__link(href="#") BUSINESS
+            li.g-nav__item 
+              a.g-nav__link(href="#") COMPANY
+      .header__contact
+        a.contact お問い合わせ
+    <!-- header__end -->
+    main#app
+      .l-page-contents
+        .l-wrapper 
+          .page-title
+            h2.heading-primary.heading-primary--page News & Press
+          .news-datail
+            ul.tab-menu 
+              li.tab-menu__item(:class="{tabMeunActive: active === 'news'}")(@click="clickTabMenu('news')")
+                span ニュース
+              li.tab-menu__item(:class="{tabMeunActive: active === 'release'}")(@click="clickTabMenu('release')")
+                span プレスリリース
+
+            div(:class="active === 'news' ? 'newsDatail' : active === 'release' ? 'releaseDatail' : ''")
+              tamplate(v-if="active === 'news'")
+                .news-datail-list
+                  dl.news-datail-list__item
+                    dt.news-list__heading.news-datail-list__heading
+                      time.news-list__date 2021.11.17
+                      .news-list__label 
+                        span.label-category NEWS
+                    dd.news-list__body 
+                      a.news-list__link(href="#") ニュースタイトル５タイトル５タイトル５タイトル５タイトル５
+                  dl.news-datail-list__item
+                    dt.news-list__heading.news-datail-list__heading
+                      time.news-list__date 2021.11.17 
+                      .news-list__label 
+                        span.label-category NEWS
+                    dd.news-list__body 
+                      a.news-list__link(href="#") ニュースタイトル４タイトル４タイトル４タイトル４タイトル４
+                  dl.news-datail-list__item
+                    dt.news-list__heading.news-datail-list__heading
+                      time.news-list__date 2021.11.17 
+                      .news-list__label 
+                        span.label-category NEWS
+                    dd.news-list__body 
+                      a.news-list__link(href="#") ニュースタイトル３タイトル３タイトル３タイトル３タイトル３
+                  dl.news-datail-list__item
+                    dt.news-list__heading.news-datail-list__heading
+                      time.news-list__date 2021.11.17 
+                      .news-list__label 
+                        span.label-category NEWS
+                    dd.news-list__body 
+                      a.news-list__link(href="#") ニュースタイトル２タイトル２タイトル２タイトル２タイトル２
+                  dl.news-datail-list__item
+                    dt.news-list__heading.news-datail-list__heading
+                      time.news-list__date 2021.11.17 
+                      .news-list__label 
+                        span.label-category NEWS
+                    dd.news-list__body 
+                      a.news-list__link(href="#") ニュースタイトル１タイトル１タイトル１タイトル１タイトル１
+              tamplate(v-if="active === 'release'")
+                .news-datail-list
+                  dl.news-datail-list__item
+                    dt.news-list__heading.news-datail-list__heading
+                      time.news-list__date 2021.11.17
+                      .news-list__label 
+                        span.label-category PRESS
+                    dd.news-list__body 
+                      a.news-list__link(href="#") プレスリリースタイトル３
+                  dl.news-datail-list__item
+                    dt.news-list__heading.news-datail-list__heading
+                      time.news-list__date 2021.11.17 
+                      .news-list__label 
+                        span.label-category PRESS
+                    dd.news-list__body 
+                      a.news-list__link(href="#") プレスリリースタイトル２
+                  dl.news-datail-list__item
+                    dt.news-list__heading.news-datail-list__heading
+                      time.news-list__date 2021.11.17 
+                      .news-list__label 
+                        span.label-category PRESS
+                    dd.news-list__body 
+                      a.news-list__link(href="#") プレスリリースタイトル1
+    <!-- header__end -->
+    footer.footer
+      .l-wrapper 
+        .footer__body 
+          .footer__logo
+            .logo 
+              a.logo__link(href="") 
+                img.logo__img(src="../images/logo.svg", alt="logo")
+          .footer__address
+            p 
+            | Web Entertainment Design Inc.<br>
+            | West Building 3F <br>
+            | 9-99 Sakuragaokacho Shibuya-ku <br>
+            | Tokyo, Japan 150-0031 <br>
+            | T/99-9999-9999 
+        .footer__copy 
+          small © Web Entertainment Design Inc.
+
+    script(src="https://cdn.jsdelivr.net/npm/vue")
+    script(src="../js/vue_index.js")

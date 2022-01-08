@@ -1,0 +1,12 @@
+@charset "UTF-8";
+@use '../../global' as g;
+
+.news-datail-list {
+  &__item {
+    border-bottom: 1px solid #CCCCCC;
+    padding: 50px 0;
+  }
+  &__heading {
+    margin-bottom: 7px;
+  }
+}

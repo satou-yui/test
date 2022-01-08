@@ -1,0 +1,29 @@
+@charset "UTF-8";
+@use '../../global' as g;
+
+.news-list {
+  &__list {
+    display: flex;
+  }
+  &__item {
+    width: calc(100% / 3);
+    padding: 10px 20px;
+    border-right: 1px solid g.$color-primary;
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      border-right: none;
+      padding-right: none;
+    }
+  }
+
+  &__heading {
+    display: flex;
+    margin-bottom: 16px;
+    font-weight: normal;
+  }
+  &__date {
+    margin-right: 17px;
+  }
+}

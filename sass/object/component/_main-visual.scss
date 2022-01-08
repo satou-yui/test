@@ -1,0 +1,11 @@
+@charset "UTF-8";
+@use '../../global' as g;
+
+.main-visual {
+  margin-bottom: 110px;
+  &__img {
+    width: 100%;
+    height: calc(100vh - 80px);
+    object-fit: cover;
+  }
+}

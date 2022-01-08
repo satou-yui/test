@@ -1,0 +1,10 @@
+@charset "UTF-8";
+@use '../../global' as g;
+
+.logo {
+  line-height: 1px;
+  margin-right: 60px;
+  &__img {
+    width: 100px;
+  }
+}

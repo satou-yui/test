@@ -1,0 +1,16 @@
+@charset "UTF-8";
+@use '../global' as g;
+
+.footer {
+  padding-bottom: 20px;
+  background-color: g.$color-reverse;
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+  }
+  &__copy small {
+    @include g.font-size(12);
+  }
+}

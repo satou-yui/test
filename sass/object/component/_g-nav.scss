@@ -1,0 +1,13 @@
+@charset "UTF-8";
+@use '../../global' as g;
+
+.g-nav {
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    margin-right: 30px;
+  }
+}

@@ -1,0 +1,35 @@
+@charset "UTF-8";
+@use '../../global' as g;
+
+.business {
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+  }
+  &__contents-left {
+    width: 46%;
+    margin-top: 100px;
+  }
+  &__contents-right {
+    width: 46%;
+  }
+
+  &__item {
+    margin-bottom: 50px;
+  }
+  &__heading {
+    font-weight: bold;
+    margin: 0 0 10px 18px;
+    position: relative;
+    &::before {
+      content: "";
+      width: 8px;
+      height: 1px;
+      position: absolute;
+      background-color: g.$color-primary;
+      top: 50%;
+      left: -18px;
+    }
+  }
+}
